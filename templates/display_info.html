@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        
+        <!-- Display user's name and additional info -->
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Additional Information:</strong> {{ info }}</p>
+
+        <!-- Optional: Display a message or instructions -->
+        <p>Face recognition was successful, and here are your details.</p>
+        
+        <!-- Button to return to home or perform another action -->
+        <a href="{{ url_for('index') }}">
+            <button>Go to Home</button>
+        </a>
+    </div>
+</body>
+</html>
